@@ -1,0 +1,21 @@
+idCliente,nombre,edad,telefono,sexo,tieneTitulo
+C001,Juan Perez,25,123456789,Masculino,true
+C002,Ana Martinez,30,987654321,Femenino,false
+C003,Carlos Lopez,40,111222333,Masculino,true
+C004,Lucia Gomez,22,444555666,Femenino,false
+C005,Pedro Rodriguez,35,777888999,Masculino,true
+C006,Mariana Ruiz,28,555444333,Femenino,false
+C007,Fernando Castro,26,222333444,Masculino,false
+C008,Sofia Diaz,29,888999111,Femenino,true
+C009,Luis Sanchez,24,333444555,Masculino,true
+C010,Laura Morales,27,999111222,Femenino,false
+C011,Andres Peña,32,888111222,Masculino,true
+C012,Clara Villalobos,23,777666555,Femenino,false
+C013,Mario González,31,666777888,Masculino,true
+C014,Patricia Mejía,33,555888444,Femenino,true
+C015,Ricardo Ocampo,34,999555666,Masculino,false
+C016,Daniela Torres,26,333222111,Femenino,true
+C017,Esteban Vargas,28,555999888,Masculino,false
+C018,Julia Romero,25,888777666,Femenino,true
+C019,Camilo Prieto,35,222111333,Masculino,true
+C020,Sandra Escobar,29,444333222,Femenino,false
