@@ -1,0 +1,10 @@
+RELACIONES:
+LOAD CSV WITH HEADERS FROM 'http://localhost:11001/project-9ff55f2f-f495-485b-ac53-5fb94b9bfac0/VISUALIZA_RELACION.csv' AS row
+MATCH (c:Cliente {idCliente: row.idCliente})
+MATCH (p:Producto {idProducto: row.idProducto})
+CREATE (c)-[:VISUALIZA]->(p);
+
+LOAD CSV WITH HEADERS FROM 'http://localhost:11001/project-9ff55f2f-f495-485b-ac53-5fb94b9bfac0/CANTIDAD_REQUERIDA_POR_CLIENTE.csv' AS row
+MATCH (o:Orden {idOrden: row.idOrden})
+MATCH (p:Producto {idProducto: row.idProducto})
+CREATE (o)-[:CONTIENE {cantidad: row.cantidad}]->(p);
