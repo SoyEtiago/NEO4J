@@ -1,0 +1,6 @@
+1. ¿Cuáles son los productos más comprados por un cliente?
+- <Modificar el ID del cliente>
+MATCH (c:Cliente {idCliente: "C005"})-[ord:ORDENA]->(o:Orden)-[cont:ESTA_COMPUESTA_DE]->(p: Producto)
+RETURN c.nombre AS Cliente, p.nombre AS Producto, count(cont.cantidad) AS cantidadComprada
+ORDER BY cantidadComprada DESC
+2. ¿Cuáles son los productos más demandados por los clientes de un sexo (hombre/mujer)?
