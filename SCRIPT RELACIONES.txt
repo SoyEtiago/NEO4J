@@ -13,3 +13,18 @@ LOAD CSV WITH HEADERS FROM 'http://localhost:11001/project-9ff55f2f-f495-485b-ac
 MATCH (c:Cliente {idCliente: row.idCliente})
 MATCH (o:Orden {idOrden: row.idOrden})
 CREATE (c)-[:ORDENA]->(o);
+
+LOAD CSV WITH HEADERS FROM 'http://localhost:11001/project-9ff55f2f-f495-485b-ac53-5fb94b9bfac0/PROVEE.csv' AS row
+MATCH(p:Producto {idProducto: row.idProducto})
+MATCH(d:Proveedor {idProveedor: row.idProveedor})
+CREATE (p)-[:DISTRIBUIDO_POR]->(d)
+
+LOAD CSV WITH HEADERS FROM 'http://localhost:11001/project-9ff55f2f-f495-485b-ac53-5fb94b9bfac0/RESIDE_EN.csv' AS row
+MATCH(c:Cliente {idCliente: row.idCliente})
+MATCH(d:Direccion {idDireccion: row.idDireccion})
+CREATE (c)-[:VIVE_EN]->(d)
+
+LOAD CSV WITH HEADERS FROM 'http://localhost:11001/project-9ff55f2f-f495-485b-ac53-5fb94b9bfac0/PROVEIDA_POR.csv' AS row
+MATCH(c:Ciudad {idCiudad: row.idCiudad})
+MATCH(p:Proveedor {idProveedor: row.idProveedor})
+CREATE (p)-[:SE_UBICA_EN]->(c)
